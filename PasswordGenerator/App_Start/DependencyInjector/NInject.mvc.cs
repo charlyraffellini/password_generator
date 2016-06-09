@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
+using PasswordGenerator.Models;
 
 namespace Ninject.Mvc
 {
@@ -75,6 +76,7 @@ namespace Ninject.Mvc
             public override void Load()
             {
                 //TODO: Bind to Concrete Types Here
+                this.Bind<PasswordCache>().ToConstant(new PasswordCache());
             }
         }
 

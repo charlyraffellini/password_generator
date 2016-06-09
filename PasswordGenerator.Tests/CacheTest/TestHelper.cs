@@ -10,7 +10,7 @@ namespace PasswordGenerator.Tests.CacheTest
             return new PasswordCache(instanceName ?? new Random().Next(10000000).ToString(), 1);
         }
 
-        public static Email _defaultEMail = new Email { Value = "email@email.com" };
+        public static Email _defaultEMail = new Email("email@email.com");
 
     }
 }
