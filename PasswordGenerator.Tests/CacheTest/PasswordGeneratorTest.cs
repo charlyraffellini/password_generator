@@ -19,7 +19,7 @@ namespace Tests.CacheTest
         }
 
         [Fact]
-        public void Two_password_with_the_same_email_should_be_differents()
+        public void Generate_password_with_empty_email_throw_exception()
         {
             Action act = (() => Generator.GenerateNew(new Email()));
             act.ShouldThrow<EmptyMailException>();
